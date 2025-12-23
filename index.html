@@ -1,113 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechUnit | Technical Co-Founders</title>
-    <style>
-        :root {
-            --bg-color: #0B1120; /* Deep Navy */
-            --text-color: #E2E8F0; /* Slate Grey */
-            --accent-color: #38BDF8; /* Electric Blue */
-            --font-main: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechUnit | Digital Consultancy</title>
+<style>
+  /* 1. OLED PURE BLACK BASE */
+  body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+    overflow: hidden;
+    position: relative; /* Needed for footer positioning */
+  }
 
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            font-family: var(--font-main);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            text-align: center;
-            padding: 20px;
-        }
+  /* 2. TYPOGRAPHY */
+  h1 {
+    font-size: 4.5rem;
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+    letter-spacing: -2.5px;
+    background: -webkit-linear-gradient(#fff, #888);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
-        /* The "Badge" - Industrial Style */
-        .status-badge {
-            background: rgba(56, 189, 248, 0.1);
-            color: var(--accent-color);
-            padding: 8px 16px;
-            border-radius: 4px;
-            font-size: 0.75rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            font-weight: 700;
-            margin-bottom: 24px;
-            border: 1px solid rgba(56, 189, 248, 0.2);
-        }
+  p.sub {
+    color: #a1a1a1;
+    font-size: 1.3rem;
+    max-width: 650px;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+    font-weight: 400;
+  }
 
-        h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            margin: 0 0 16px 0;
-            letter-spacing: -2px;
-            line-height: 1.1;
-        }
+  strong { color: #ffffff; font-weight: 600; }
 
-        p {
-            font-size: 1.125rem;
-            color: #94A3B8; /* Muted Grey */
-            max-width: 500px;
-            line-height: 1.6;
-            margin-bottom: 40px;
-        }
+  /* 3. ANIMATION */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  }
+  .delay-1 { animation-delay: 0.2s; }
+  .delay-2 { animation-delay: 0.6s; }
+  .delay-3 { animation-delay: 1.0s; }
+  .delay-4 { animation-delay: 1.5s; } /* Footer appears last */
 
-        /* The CTA Button */
-        .cta-button {
-            background-color: var(--text-color);
-            color: var(--bg-color);
-            padding: 16px 32px;
-            text-decoration: none;
-            font-weight: 700;
-            border-radius: 2px;
-            transition: all 0.2s ease;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.875rem;
-        }
+  @keyframes fadeInUp {
+    to { opacity: 1; transform: translateY(0); }
+  }
 
-        .cta-button:hover {
-            background-color: var(--accent-color);
-            color: var(--bg-color);
-            transform: translateY(-2px);
-        }
+  /* 4. THE BUTTON */
+  .btn {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 16px 36px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    border: 1px solid #ffffff;
+  }
+  .btn:hover {
+    background-color: #000000;
+    color: #ffffff;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    transform: scale(1.02);
+  }
 
-        /* Footer Info */
-        .footer {
-            position: absolute;
-            bottom: 40px;
-            font-size: 0.75rem;
-            color: #475569;
-            letter-spacing: 1px;
-        }
+  /* 5. THE NEW "TRUST" FOOTER */
+  .footer {
+    position: absolute;
+    bottom: 30px;
+    font-size: 0.75rem;
+    color: #444; /* Very dark grey - subtle */
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .footer a {
+    color: #444;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer a:hover { color: #888; } /* Lightens on hover */
 
-        /* Mobile Adjustments */
-        @media (max-width: 600px) {
-            h1 { font-size: 2.5rem; }
-            p { font-size: 1rem; }
-        }
-    </style>
+</style>
 </head>
 <body>
 
-    <h1>TechUnit</h1>
-    
-    <p>
-        We build the engines for ambitious startups in UAE. <br>
-        We are currently scouting top-tier <strong>Designers</strong> and <strong>Engineers</strong> for our 2026 Core Team.
-    </p>
+  <h1 class="fade-up delay-1">TechUnit</h1>
 
-    <a href="mailto:careers@techunit.ae?subject=Application: [Your Name] - [Role]" class="cta-button">
-        Join / Careers
-    </a>
+  <p class="fade-up delay-2 sub">
+    Architecting the digital infrastructure for the UAE's most ambitious ventures.<br><br>
+    We are assembling our <strong>Founding Team</strong> for 2026.<br>
+    Scouting for a <strong>Principal Technical Lead</strong> and a <strong>Lead Product Designer</strong>.
+  </p>
 
-    <div class="footer">
-        Emarati Owned Company 🇦🇪
-    </div>
+  <a class="fade-up delay-3 btn" 
+     href="mailto:careers@techunit.ae?subject=Application%3A%20Founding%20Team%20(2026)&body=Hi%20TechUnit%2C%0A%0AI%20am%20applying%20for%20the%20role%20of%3A%0A%5B%20Technical%20Lead%20%2F%20Product%20Designer%20%5D%0A%0A%E2%80%A2%20Portfolio%2FGitHub%3A%20%0A%E2%80%A2%20LinkedIn%3A%20%0A%E2%80%A2%20Current%20Location%3A%20Dubai%20%2F%20Remote%0A%0AWhy%20I%20belong%20on%20the%20Founding%20Team%3A%0A%5B%20One%20sentence%20pitch%20%5D%0A%0ABest%2C%0A">
+     APPLY FOR ACCESS
+  </a>
+
+  <div class="fade-up delay-4 footer">
+    <span>Dubai, UAE</span>
+    <span>•</span>
+    <span>Business Village, Block B</span>
+    <span>•</span>
+    <a href="mailto:info@techunit.ae">info@techunit.ae</a>
+  </div>
 
 </body>
 </html>
