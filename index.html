@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechUnit™ | Phase 1 Recruitment</title>
+    <title>TechUnit™ | Deployment Roster</title>
     <meta name="description" content="TechUnit. We work as the technical Co-Founder Unit for Ambitious Startups in Dubai.">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -63,8 +63,8 @@
         .content { padding: 50px 50px 20px 50px; }
 
         /* HEADER */
-        h1 { font-size: 48px; font-weight: 900; letter-spacing: -2px; line-height: 1; margin-bottom: 10px; text-transform: uppercase; }
-        .tagline { font-size: 18px; color: var(--text-muted); font-weight: 500; margin-bottom: 40px; }
+        h1 { font-size: 48px; font-weight: 900; letter-spacing: -2px; line-height: 1; margin-bottom: 15px; text-transform: uppercase; }
+        .tagline { font-size: 18px; color: var(--text-muted); font-weight: 500; margin-bottom: 40px; max-width: 90%; }
 
         /* MISSION BOX */
         .mission-box {
@@ -85,19 +85,21 @@
         }
         .rules-title { font-weight: 800; text-transform: uppercase; font-size: 12px; margin-bottom: 10px; display: block; }
         .rule-item { display: flex; margin-bottom: 8px; font-size: 14px; }
-        .rule-icon { margin-right: 10px; font-weight: 700; }
+        .rule-icon { margin-right: 10px; font-weight: 700; min-width: 25px;}
 
         /* UNIT SECTIONS */
         .unit-header {
             background: #F4F4F4;
-            padding: 8px 15px;
+            padding: 10px 15px;
             font-size: 11px;
             font-weight: 800;
             text-transform: uppercase;
             letter-spacing: 1px;
-            color: #555;
+            color: #000;
             margin: 40px 0 15px 0;
             border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
         }
 
         .role-card {
@@ -111,22 +113,35 @@
         }
         .role-card:hover { border-color: #000; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
         
-        .role-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px; }
+        .role-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
         .role-title { font-weight: 700; font-size: 16px; color: #000; }
-        .role-badge { font-size: 9px; background: #000; color: #fff; padding: 2px 6px; border-radius: 2px; font-weight: 700; text-transform: uppercase; }
+        .role-badge { font-size: 9px; background: #000; color: #fff; padding: 3px 6px; border-radius: 2px; font-weight: 700; text-transform: uppercase; }
+        .role-badge.special { background: #333; }
         
-        .role-stack { font-family: monospace; font-size: 11px; color: var(--text-muted); display: block; margin-bottom: 8px; text-transform: uppercase; }
+        .role-stack { font-family: monospace; font-size: 11px; color: var(--text-muted); display: block; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
         .role-req { font-size: 13px; color: var(--text-main); line-height: 1.4; }
+
+        /* SPECIALIST CARD (UNIT 00) */
+        .specialist-card {
+            background: #111;
+            color: #fff;
+            padding: 20px;
+            border-radius: 4px;
+            margin-top: 30px;
+            border: 1px solid #000;
+        }
+        .specialist-card .role-title { color: #fff; }
+        .specialist-card .role-stack { color: #888; }
+        .specialist-card .role-req { color: #ccc; }
 
         /* --- ENHANCED EMAIL / APPLY SECTION --- */
         .protocol-section { 
             margin-top: 60px; 
             text-align: center; 
             background: #FFF; 
-            /* Changed from dashed grey to solid black for seriousness */
             border: 2px solid #000; 
             border-radius: 4px; 
-            overflow: hidden; /* Keeps content inside the border */
+            overflow: hidden; 
             position: relative;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         }
@@ -134,7 +149,7 @@
         .protocol-header {
             background: #000;
             color: #fff;
-            padding: 12px;
+            padding: 15px;
             font-size: 12px;
             font-weight: 800;
             text-transform: uppercase;
@@ -151,7 +166,7 @@
             background-color: #000; 
             color: #fff; 
             text-decoration: none;
-            padding: 20px 50px; 
+            padding: 20px 60px; 
             font-weight: 800; 
             font-size: 14px;
             text-transform: uppercase; 
@@ -163,44 +178,30 @@
             z-index: 1;
         }
 
-        /* Hover: Slight Lift */
         .btn:hover { 
             transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
         }
-
-        /* Hover: Shine Effect */
-        .btn::after {
-            content: '';
-            position: absolute;
-            top: 0; left: -100%;
-            width: 100%; height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: 0.5s;
-            z-index: -1;
-        }
-        .btn:hover::after { left: 100%; }
 
         .system-alert {
             font-family: monospace;
-            font-size: 12px;
-            color: #D00000; /* Serious Red */
+            font-size: 11px;
+            color: #D00000;
             background: #FFF0F0;
-            padding: 10px;
+            padding: 12px;
             display: inline-block;
             border-radius: 4px;
             margin-bottom: 25px;
             border: 1px solid #FFD0D0;
+            max-width: 90%;
+            line-height: 1.5;
         }
-
-        .note { font-size: 12px; color: #888; margin-top: 20px; font-family: monospace;}
 
         /* FOOTER */
         footer {
             background: #F9F9F9;
             border-top: 1px solid var(--border);
             padding: 40px 50px;
-            margin-top: 0;
         }
         
         .footer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
@@ -214,7 +215,7 @@
             .status-bar { padding: 10px 20px; }
             .footer-grid { grid-template-columns: 1fr; }
             footer { padding: 30px 20px; }
-            .btn { width: 100%; }
+            .btn { width: 100%; padding: 20px; }
         }
     </style>
 </head>
@@ -222,20 +223,20 @@
 
     <div class="container">
         <div class="status-bar">
-            <span><span class="blink">●</span> Phase 1 Vetting</span>
+            <span><span class="blink">●</span> Phase 1 Vetting Protocol</span>
             <span>License #1584982</span>
         </div>
 
         <div class="content">
             <header>
                 <h1>TechUnit<span style="font-size: 20px; vertical-align: top;">™</span></h1>
-                <div class="tagline">We are building vetting and assembling Dubai's top 1% Builders. its not about hiring employees; we deploy Partners.</div>
+                <div class="tagline">We are assembling Dubai's top 1% Builders. We do not hire employees; we deploy Partners.</div>
             </header>
 
             <div class="mission-box">
                 <div class="mission-title">Operational Standard</div>
                 <div class="mission-text">
-                    We are a process-driven company. We follow a strict SOPs and step-by-step execution protocol. 
+                    We are a process-driven Unit. We utilize strict SOPs, asynchronous comms, and Swiss-Style precision. 
                     We do not sell "hours"; we sell deployment. Only ambitious talent that respects 
                     deadlines and high-precision systems will be vetted.
                 </div>
@@ -249,77 +250,106 @@
                 </div>
                 <div class="rule-item">
                     <span class="rule-icon">02.</span>
-                    <span><strong>Efficiency:</strong> being Active, Hands-on, and strategic is a must.</span>
+                    <span><strong>Efficiency:</strong> Being Active, Hands-on, and Strategic is a must.</span>
                 </div>
                 <div class="rule-item">
                     <span class="rule-icon">03.</span>
-                    <span><strong>Vetting:</strong> Agencies are not allowed. We are building verified Partners. Anything but a serious partner is rejected immediately.</span>
+                    <span><strong>Vetting:</strong> Agencies are not allowed. We are building verified Partners.</span>
                 </div>
             </div>
 
-            <div class="unit-header">Unit 01: Product Core</div>
+            <div class="unit-header">
+                <span>Unit 01: Core Product</span>
+                <span style="color:#888;">THE BUILDERS</span>
+            </div>
 
             <div class="role-card" style="border-left: 4px solid #000;">
                 <div class="role-top">
-                    <span class="role-title">Technical Product Lead</span>
+                    <span class="role-title">Product Architect (Tech Lead)</span>
                     <span class="role-badge">COMMAND</span>
                 </div>
-                <span class="role-stack">ARCHITECT / FULL-STACK / LEADER</span>
+                <span class="role-stack">SYSTEM DESIGN / LEADERSHIP / SCALING</span>
                 <span class="role-req">Must be "Hands-On." Capable of writing code AND managing the delivery timeline. No whiteboard-only architects.</span>
             </div>
 
             <div class="role-card">
                 <div class="role-top">
-                    <span class="role-title">Senior Generalist (Full-Stack)</span>
+                    <span class="role-title">Founding Engineer (Full-Stack)</span>
                     <span class="role-badge">BUILDER</span>
                 </div>
                 <span class="role-stack">REACT / NODE / PYTHON / SQL</span>
                 <span class="role-req">Must be capable of building an entire MVP solo. You own the frontend and the backend.</span>
             </div>
 
-            <div class="role-card">
-                <div class="role-top">
-                    <span class="role-title">Cross-Platform Mobile Lead</span>
-                    <span class="role-badge">MOBILE</span>
-                </div>
-                <span class="role-stack">REACT NATIVE / FLUTTER</span>
-                <span class="role-req">Focus on efficiency: One codebase, two apps (iOS & Android).</span>
+            <div class="unit-header">
+                <span>Unit 02: Specialized Tech</span>
+                <span style="color:#888;">THE SCALERS</span>
             </div>
 
             <div class="role-card">
                 <div class="role-top">
-                    <span class="role-title">Product Designer</span>
-                    <span class="role-badge">VISUAL</span>
+                    <span class="role-title">Mobile Lead</span>
+                    <span class="role-badge special">MOBILE</span>
                 </div>
-                <span class="role-stack">UI/UX / BRANDING / FIGMA</span>
-                <span class="role-req">Must adapt to any client style. We need problem solvers, not just artists.</span>
+                <span class="role-stack">FLUTTER / REACT NATIVE / IOS</span>
+                <span class="role-req">Focus on efficiency: Single codebase, high-performance deployment.</span>
             </div>
-
-            <div class="unit-header">Unit 02: Infrastructure & Specialists</div>
 
             <div class="role-card">
                 <div class="role-top">
-                    <span class="role-title">Cloud & AI Engineer</span>
-                    <span class="role-badge">SPECIALIST</span>
+                    <span class="role-title">AI & Data Architect</span>
+                    <span class="role-badge special">INTELLIGENCE</span>
                 </div>
-                <span class="role-stack">AWS / OPENAI / PYTHON</span>
-                <span class="role-req">For high-level deployments only. Must demonstrate experience with live AI integrations and scalable cloud architecture.</span>
+                <span class="role-stack">LLM OPS / PYTHON / VECTOR DB</span>
+                <span class="role-req">For high-level deployments only. Must demonstrate experience with live AI integrations.</span>
+            </div>
+
+            <div class="unit-header">
+                <span>Unit 03: Visual Systems</span>
+                <span style="color:#888;">THE BRAND</span>
+            </div>
+
+            <div class="role-card">
+                <div class="role-top">
+                    <span class="role-title">Brand Identity Partner</span>
+                    <span class="role-badge">SWISS STYLE</span>
+                </div>
+                <span class="role-stack">GRID SYSTEMS / TYPOGRAPHY / MINIMALISM</span>
+                <span class="role-req">Strict adherence to Industrial/Swiss design principles. No Canva. No 3D clutter.</span>
+            </div>
+
+             <div class="role-card">
+                <div class="role-top">
+                    <span class="role-title">Product Designer (UI/UX)</span>
+                    <span class="role-badge">INTERFACE</span>
+                </div>
+                <span class="role-stack">FIGMA / PROTOTYPING / USER FLOW</span>
+                <span class="role-req">Designing for function, speed, and clarity.</span>
+            </div>
+
+            <div class="specialist-card">
+                <div class="role-top">
+                    <span class="role-title">Unit 00: Specialist Protocol</span>
+                    <span class="role-badge" style="background: #fff; color:#000;">OPEN ROSTER</span>
+                </div>
+                <span class="role-stack">ELITE TALENT / UNLISTED ROLES / NICHE SKILLS</span>
+                <span class="role-req">If you are the top 1% in a field not listed above (e.g., 3D Motion, CyberSec, Blockchain), use the protocol to propose your Unit.</span>
             </div>
 
             <div class="protocol-section">
-                <div class="protocol-header">Apply</div>
+                <div class="protocol-header">Deployment Gate</div>
                 
                 <div class="protocol-body">
                     <div class="system-alert">
-                        <strong>NOTE:</strong> This is a deployment vetting. Applications without a Live Repository Link (GitHub) or Design Portfolio will be automatically filtered out. We do not review generic CVs..
+                        <strong>WARNING:</strong> This is a strict vetting process.<br>
+                        Applications without a Live Repository Link (GitHub) or Portfolio (Behance) are automatically rejected.
                     </div>
                     <br>
 
-                    <a href="https://tally.so/r/68elg5" class="btn">
-                        Submit here
+                    <a href="https://tally.so/r/68elg5" class="btn" target="_blank">
+                        INITIATE PROTOCOL
                     </a>
 
-                    </div>
                 </div>
             </div>
 
